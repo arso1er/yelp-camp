@@ -1,0 +1,24 @@
+<% layout ('layout') -%>
+<section id="top-section">
+	<h1 id="mainHeader">Campgrounds</h1>
+	<p>Create and view best campgrounds from all over the world</p>
+	<p>Start Today!</p>
+	<a class="btn btn-primary page-scroll" type="button" href="#campgrounds-page">View Campgrounds</a>
+</section>
+<section id="campgrounds-page">
+	<div class="container">
+		<div id="campgrounds" class="row">
+			<div class="grid rig">
+				<% campgrounds.forEach(function(campground) { %>
+					<div class="col-md-4 col-sm-4 col-xs-6 grid-item rig-cell">
+						<img class="rig-img" src="<%=campground.cover %>">
+						<h4 class="rig-header"><%= campground.name %></h4>
+						<p class="rig-text"><%= campground.price %></p>
+						<a href="/api/campgrounds/<%=campground._id %>"><i class="fa fa-plus rig-icon"></i>
+						<div class="rig-overlay"></div>
+					</div>
+				<% }); %>
+			</div>
+		</div>
+	</div>
+</section>

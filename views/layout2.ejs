@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <!-- Sites MetaData -->
+    <meta charset="utf-8">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<meta name="description" content="Campgrounds">
+    <meta author="Roman Tuomisto">
+  	<!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta Cache-Control="max-age=0,no-cache,no-store,post-check=0,pre-check=0">
+
+	<title>YelpCamp Campgrounds</title>
+
+	<!-- CSS libraries and custom css -->
+	<link rel="stylesheet" type="text/css" href="/libs/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/libs/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/custom.css">
+	<link rel="stylesheet" type="text/css" href="/css/landing.css">
+
+</head>
+<body id="page-top">
+	<% include ./partials/navbar %>
+
+	<header>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<% if(error && error.length > 0) { %>
+						<div class="alert alert-danger alert-dismissible fade in" role="alert">
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            					<span aria-hidden="true">&times;</span>
+          					</button>
+							<p><%= error %></p>
+						</div>
+					<% } %>
+
+					<% if(success && success.length > 0) { %>
+						<div class="alert alert-success alert-dismissible fade in" role="alert">
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            					<span aria-hidden="true">&times;</span>
+          					</button>
+							<p><%= success %></p>
+						</div>
+					<% } %>
+					<div id="errorMsg"></div>
+					<div id="successMsg"></div>
+					<div id="Message"></div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<%- body -%>
+
+	<% include ./partials/footer %>
+
+	<!-- Javascript files here -->
+	<script type="text/javascript" src="/libs/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/libs/jquery-easing/jquery-easing.min.js"></script>
+	<script type="text/javascript" src="/libs/masonry/dist/masonry.pkgd.min.js"></script>
+	<script type="text/javascript" src="/js/scroll.js"></script>
+	<script type="text/javascript" src="/js/search.js"></script>
+	<script type="text/javascript" src="/js/validation.js"></script>
+</body>
+</html>

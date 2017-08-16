@@ -1,0 +1,25 @@
+{
+  "name": "yelpcamp-app",
+  "description": "Yelplike campground application",
+  "main": "server.js",
+  "authors": [
+    "Roman Tuomisto"
+  ],
+  "license": "ISC",
+  "homepage": "www.yelpcamp.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "masonry": "^4.2.0",
+    "jquery-easing": "*",
+    "imagesloaded": "^4.1.3"
+  }
+}
