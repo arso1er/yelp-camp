@@ -16,7 +16,7 @@
 						<img class="rig-img" src="<%=campground.cover %>">
 						<h4 class="rig-header"><%= campground.name %></h4>
 						<p class="rig-text"><%= campground.price %></p>
-						<a href="/api/campgrounds/<%=campground._id %>"><i class="fa fa-plus rig-icon"></i>
+						<a class="rig-icon" href="/api/campgrounds/<%=campground._id %>"><i class="fa fa-plus" aria-hidden="true"></i></a>
 						<div class="rig-overlay"></div>
 					</div>
 				<% }); %>

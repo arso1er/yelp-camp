@@ -138,7 +138,7 @@ footer p {
     bottom: 0;
     right: 0;
     margin: auto;
-    background: rgb(1, 86, 67);
+    background: rgb(255, 148, 75);
     background-size:50px 50px;
     opacity:0;
     filter:alpha(opacity=0);/*For IE6 - IE8*/
@@ -166,7 +166,7 @@ footer p {
     line-height: 1.2em;
     letter-spacing: 1.1px;
     top:40%;
-    color:#ffffff;
+    color:#000;
     opacity:0;
     filter:alpha(opacity=0);/*For older IE*/
     transform:translateY(-20px);
@@ -193,6 +193,6 @@ footer p {
 .rig .rig-cell:hover .rig-text,
 .rig .rig-cell:hover .rig-header,
 .rig .rig-cell:hover .rig-icon {
-  opacity: 0.9;
+  opacity: 1;
   margin-bottom: 10px;
 }
