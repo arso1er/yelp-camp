@@ -16,30 +16,19 @@ footer {
 	position: relative;
 }
 
-section:nth-of-type(1) {
-  height: 100vh;
+section {
   background: url(../images/bcg.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-section:nth-of-type(2) {
+  background-position: 60% 50%;
   padding-top: 60px;
   height: 100%;
-  min-height: 200vh;
-	background-color: #ffffff;
+  min-height: auto;
 }
 
-/*Navbar styles*/
-#mainNav {
-	background-color: rgb(1, 86, 67);
-}
+/*Nabbar styles*/
 
-#mainNav li a {
-	color: #ffffff;
-}
-
-@media (min-width: 768px) {
+/*@media (min-width: 768px) {
   .navbar-custom {
     background-color: transparent;
     visibility: hidden;
@@ -68,6 +57,13 @@ section:nth-of-type(2) {
     color: #ffffff;
     visibility: visible;
   }
+}*/
+
+/*Bootstrap grid styles */
+.row:nth-of-type(2) {
+  padding: 25px;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 25px;
 }
 
 /*Masonry grid styles*/
@@ -93,7 +89,7 @@ body {
   min-height: 100%;
   /* Margin bottom by footer height */
   text-align: center;
-  margin-bottom: 90px;
+  margin-bottom: 50px;
   font-family: 'Raleway', sans-serif;
 }
 
@@ -106,7 +102,7 @@ footer {
   width: 100%;
   bottom: 0;
   /* Set the fixed height of the footer here */
-  height: 90px;
+  height: 50px;
   padding-top: 20px;
   background: #ffffff;
 }
