@@ -18,7 +18,8 @@ const Campground 	= require('./models/campground');
 
 //Routes
 //const indexRoutes 	= require('./api/routes');
-const campgroundRoutes = require('./api/routes/campground');
+const authRoutes		= require('./api/routes/auth');
+const campgroundRoutes 	= require('./api/routes/campground');
 
 //initialize express app
 const app = express();
@@ -64,6 +65,7 @@ app.use(function(req, res, next) {
 
 //Use routes
 //app.use("/", indexRoutes);
+app.use("/api/", authRoutes);
 app.use("/api/campgrounds", campgroundRoutes);
 
 //Start server
