@@ -1,0 +1,54 @@
+<% layout('layout') -%>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h2 class="page-header">Create new campground</h2>
+      </div>
+    </div>
+    <div class="row text-left">
+      <div class="col-md-8 col-md-offset-2">
+        <form id="postForm" action="/api/campgrounds" method="post" enctype="multipart/form-data">
+          <p id="errorMsgUpload"></p>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="title">Title:</label>
+              <input class="form-control" type="text" id="title" name="name">
+            </div>
+            <div class="form-group">
+              <label for="price">Price:</label>
+              <input type="number" name="price" id="price" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="location">Location:</label>
+              <input type="text" name="location" id="location" class="form-control">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="description">Description:</label>
+              <textarea name="description" id="description" class="form-control" rows="8" cols="80"></textarea>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="campgroundImgUpload" class="custom-file-upload" id="coverImgLabel">
+                <span class="glyphicon glyphicon-cloud-upload"></span>
+                Choose image
+              </label>
+              <input class="form-control" type="file" name="cover" id="campgroundImgUpload">
+            </div>
+            <!-- Wrap the image or canvas element with a block element (container) -->
+            <div id="imgPreviewContainer">
+              <img id="imgPreview" src="" alt="">
+              <div id="imageBtns" class="btn-group">
+                <button type="reset" class="btn btn-warning" id="resetImage">Reset image</button>
+                <button type="button" class="btn btn-success" id="submitImage">Submit Image</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

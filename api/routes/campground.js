@@ -10,4 +10,8 @@ router
 	.get(campgroundCtrl.getAllCampgrounds)
 	.post(campgroundCtrl.createCampground);
 
+router
+	.route("/new")
+	.get(campgroundCtrl.getPostForm);
+
 module.exports = router;

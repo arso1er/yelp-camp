@@ -1,9 +1,17 @@
 header {
-	position: absolute;
+	position: relative;
   width: 100%;
-	top: 60px;
-	padding-top: 60px;
-	height: 20vh;
+	top: 50px;
+	padding-top: 50px;
+	height: 50vh;
+	background: url(../images/bcg.jpeg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 60% 50%;
+}
+
+header .jumbotron {
+	background: rgba(255, 255, 255, 0.7);
 }
 
 #slideshow-section {
@@ -17,13 +25,39 @@ footer {
 }
 
 section {
-  background: url(../images/bcg.jpeg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 60% 50%;
-  padding-top: 60px;
+	margin-top: 50px;
+  padding: 60px;
   height: 100%;
   min-height: auto;
+}
+
+/* Header and text styles */
+#errorMsgUpload {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #c12e12;
+  letter-spacing: 1.2px;
+  font-family: "Montserrat", sans-serif;
+}
+
+/*Form styles*/
+.custom-file-upload {
+    border: 1px ridge #3498db;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    background: transparent;
+    transition: all 0.2s;
+}
+
+#campgroundImgUpload {
+  display: none;
+  background: transparent;
+  border: 1px ridge #3498db;
 }
 
 /*Navbar styles*/
@@ -37,7 +71,7 @@ section {
     transition: padding 0.3s;
     border: none;
   }
-  
+
   .navbar-custom .navbar-nav > li > a {
     color: transparent;
     visibility: hidden;
@@ -60,19 +94,15 @@ section {
 }*/
 
 /*Bootstrap grid styles */
-.row:nth-of-type(2) {
-  padding: 25px;
-  background-color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 25px;
-}
+
 
 /*Masonry grid styles*/
 /* fluid 5 columns */
 .grid-sizer,
 /* 2 columns wide */
-.grid-item { 
+.grid-item {
   width: 33.33%;
-  padding: 0; 
+  padding: 0;
 }
 
 .grid .grid-item img {

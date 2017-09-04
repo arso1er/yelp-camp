@@ -15,6 +15,7 @@
 	<!-- CSS libraries and custom css -->
 	<link rel="stylesheet" type="text/css" href="/libs/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/libs/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/libs/cropper/dist/cropper.min.css">
 	<link rel="stylesheet" type="text/css" href="/css/custom.css">
 	<link rel="stylesheet" type="text/css" href="/css/landing.css">
 
@@ -25,6 +26,13 @@
 	<header>
 		<div class="container">
 			<div class="row">
+      	<div class="jumbotron">
+      		<h1 id="mainHeader">Campgrounds</h1>
+      		<p class="lead-in text-muted">Create and view best campgrounds from all over the world</p>
+      		<p class="lead-in text-muted">Start Today!</p>
+      	</div>
+      </div>
+      <div class="row">
 				<div class="col-md-10 col-md-offset-1">
 					<% if(error && error.length > 0) { %>
 						<div class="alert alert-danger alert-dismissible fade in" role="alert">
@@ -59,11 +67,13 @@
 	<script type="text/javascript" src="/libs/jquery/dist/jquery.min.js"></script>
 	<script type="text/javascript" src="/libs/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="/libs/jquery-easing/jquery.easing.min.js"></script>
+  	<script type="text/javascript" src="/libs/cropper/dist/cropper.min.js"></script>
 	<script type="text/javascript" src="/libs/imagesloaded/imagesloaded.pkgd.min.js"></script>
 	<script type="text/javascript" src="/libs/masonry/dist/masonry.pkgd.min.js"></script>
 	<script type="text/javascript" src="/js/scroll.js"></script>
 	<script type="text/javascript" src="/js/search.js"></script>
 	<script type="text/javascript" src="/js/masonry.js"></script>
+  	<script type="text/javascript" src="/js/cropper.js"></script>
 	<script type="text/javascript" src="/js/validation.js"></script>
 </body>
 </html>

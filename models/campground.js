@@ -24,7 +24,7 @@ var campgroundSchema = new Schema({
 	// 	ref: "Blog"
 	// }],
 	// street: String,
-	// location:{ 
+	// location:{
  //        type: {type: String, default: "Point"},
 	// 	coordinates: {type: [Number], default: [0,0]}
  //    },

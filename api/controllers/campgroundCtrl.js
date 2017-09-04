@@ -21,6 +21,11 @@ module.exports.getAllCampgrounds = (req, res, next) => {
 	paginate.paginateCampgrounds(req, res, next);
 };
 
+//Get post form
+module.exports.getPostForm = (req, res, next) => {
+	res.render("campground/new.ejs");
+};
+
 //Post new campground
 module.exports.createCampground = (req, res, next) => {
 	var campground = new Campground();
