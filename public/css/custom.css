@@ -155,7 +155,7 @@ footer p {
 }
 
 .rig .rig-cell:hover .rig-img {
-    transform:scale(1.05);
+    transform:scale(1.03);
 }
 
 /* If have the overlay layer */
@@ -163,6 +163,7 @@ footer p {
     position: absolute;
     display:block;
     width: 100%;
+    z-index: 2;
     top: 0;
     left: 0;
     bottom: 0;
@@ -175,7 +176,7 @@ footer p {
     transition:all 0.6s;
 }
 .rig .rig-cell:hover .rig-overlay {
-    opacity:0.8;
+    opacity:0.7;
     transform: scale(1);
     transition: all 1s;
 }
@@ -186,6 +187,7 @@ footer p {
     padding:0 10px;
     box-sizing:border-box;
     position:absolute;
+    z-index: 3;
     left:0;
     width:100%;
     text-align:center;
@@ -196,7 +198,7 @@ footer p {
     line-height: 1.2em;
     letter-spacing: 1.1px;
     top:40%;
-    color:#000;
+    color:#333;
     opacity:0;
     filter:alpha(opacity=0);/*For older IE*/
     transform:translateY(-20px);
