@@ -61,27 +61,31 @@ module.exports.getPostForm = (req, res, next) => {
 
 //Post new campground
 module.exports.createCampground = (req, res, next) => {
-	upload(req, res, (err)=> {
+	upload(req, res, (err)	=> {
 		if(err) {
 			req.flash("error", err.message);
 			res.redirect("back");
 			return;
 		} else {
-
-		}
-	})
-	var campground = new Campground();
-	campground.name = req.body.name;
-	campground.images = _splitArray(req.body.images);
-	campground.cover = req.body.cover;
-	campground.price = req.body.price;
-	campground.description = req.body.description;
-	campground.author = "Roman Tuomisto";
-	campground.save((err, newCampground) => {
-		if(err) {
-			res.status(500).send(err.message);
-		} else {
-			res.redirect("/campgrounds");
+			var cover = "";
+			if(typeof req.file !== undefined) {
+				cover = req.file.key;
+				console.log(cover);
+			}
+			var campground = new Campground();
+			campground.name = req.body.name;
+			campground.images = _splitArray(req.body.images);
+			campground.cover = cover;
+			campground.price = req.body.price;
+			campground.description = req.body.description;
+			campground.author = "Roman Tuomisto";
+			campground.save((err, newCampground) => {
+				if(err) {
+					res.status(500).send(err.message);
+				} else {
+					res.redirect("/campgrounds");
+				}
+			});
 		}
 	});
 };
