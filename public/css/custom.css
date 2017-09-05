@@ -60,6 +60,10 @@ section {
   border: 1px ridge #3498db;
 }
 
+.invalid {
+  border: 2px ridge #c12e12;
+}
+
 /*Navbar styles*/
 
 /*@media (min-width: 768px) {

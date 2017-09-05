@@ -1,14 +1,22 @@
 $(document).ready(function() {
   var _URL = window.URL || window.webkitURL;
+  //Dom element variables
   var imgPreview = $("#imgPreview");
   var errorMsg = $("#errorMsgUpload");
   var imageBtns = $("#imageBtns");
   var pickImage = $("#coverImgLabel");
+  //Campground variables
   var coverImage;
-
+  var campground = {
+    name: "",
+    price: null,
+    location: "",
+    description: ""
+  };
+  //Initial setup
   pickImage.prop("disabled", false);
   imageBtns.hide();
-
+  //On image select function
   $("#postForm").on("change", "#campgroundImgUpload", function(event) {
     if(sizeValid(this, 3000000) && typeValid('campgroundImgUpload')) {
       errorMsg.html("");
@@ -109,6 +117,39 @@ $(document).ready(function() {
         }
       };
       img.src = _URL.createObjectURL(file);
+    }
+  };
+  //Validate inputs
+  function validateInputs(event) {
+    event.preventDefault();
+    //value variables
+    var nameVal = document.getElementById("name").value();
+    var descriptionVal = document.getElementById("description").value();
+    var priceVal = document.getElementById("price").value();
+    var locationVal = document.getElementById("location").value();
+    //Validation functions invocation
+    validateName(nameVal);
+    validateDescription(descriptionVal);
+    //Functions that will validate fields
+    //Name input
+    function validateName(nameVal) {
+      if(nameVal === "") {
+        document.getElementById("name").addClass("invalid");
+        campground.name = "";
+      } else if(nameVal.length < 3) {
+        document.getElementById("name").addClass("invalid");
+        campground.name = "";
+      } else {
+        document.getElementById("name").addClass("valid");
+        campground.name = nameVal;
+      }
+    };
+    //Description input
+    if(descriptionVal === "") {
+      document.getElementById("description").addClass("invalid");
+      campground.description = "";
+    } else if() {
+      
     }
   }
 });
