@@ -19,6 +19,14 @@
         			</div>
       			</form>
 			</ul>
+			<ul id="MainNav2" class="nav navbar-nav navbar-right">
+				<% if(!user) { %>
+					<li><a href="/login"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a></li>
+				<% } else { %>
+					<li><a href="/api/profile"><i class="fa fa-user" aria-hidden="true"></i> <%= user.username %> profile</a></li>
+					<li><a href="/logout"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+				<% } %>
+			</ul>
 		</div>
 	</div>
 </nav>

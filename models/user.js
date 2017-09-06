@@ -1,6 +1,6 @@
 var mongoose 	= require("mongoose"),
-	bcrypt 		= require('bcrypt-nodejs'),
-	crypto 		= require('crypto');
+	 bcrypt 		= require('bcrypt-nodejs'),
+	 crypto 		= require('crypto');
 
 var UserSchema = new mongoose.Schema({
 	email: {type: String, unique: true, lowercase: true, required: true},
@@ -17,12 +17,11 @@ var UserSchema = new mongoose.Schema({
   status: {type: Boolean, default: false},
 	username: {type: String, unique: true, required: true},
 	password: { type: String, required: true },
-  	resetPasswordToken: String,
-  	resetPasswordExpires: Date,
+  resetPasswordToken: String,
+  resetPasswordExpires: Date,
 	created: {type: Date, default: Date.now},
-	image: String
+	avatar: String
 });
-
 
 // Hash the password before saving it to the database
 UserSchema.pre('save', function(next) {

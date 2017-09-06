@@ -4,10 +4,22 @@ const User = require('../../models/user');
 
 //const sendMail = require('./sendMail');
 
+//Login logic
+//Get login form
+module.exports.getLoginForm = (req, res, next) => {
+	res.render("auth/login.ejs");
+};
+
 //Register logic
 //get register form
 module.exports.getRegisterForm = (req, res, next) => {
-	res.render("auh/register");
+	res.render("auth/register.ejs");
+};
+
+//register a user
+module.exports.register = (req, res, next) => {
+	var user = new User();
+
 };
 
 //compare username and email
@@ -41,8 +53,7 @@ module.exports.compare = (req, res, next) => {
 	}
 };
 
-//register a user
-module.exports.register = (req, res, next) => {
-	var user = new User();
+//Logout logic
+module.exports.logOut = (req, res, next) => {
 
-}
+};

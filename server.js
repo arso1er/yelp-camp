@@ -10,11 +10,13 @@ const session 		= require('express-session');
 const mongoStore	= require('connect-mongo')(session);
 const flash 		= require('express-flash');
 const mongoose 		= require('mongoose');
+const moment 		= require('moment');
 const path 			= require('path');
 const ejs 			= require('ejs');
 const engine		= require('ejs-mate');
 
 const Campground 	= require('./models/campground');
+const User 			= require("./models/user");
 
 //Routes
 //const indexRoutes 	= require('./api/routes');
@@ -57,7 +59,9 @@ app.use(function(req, res, next) {
 });
 
 //Local variables
+app.locals.moment = moment;
 app.use(function(req, res, next) {
+	res.locals.user = req.user;
 	res.locals.error = req.flash('error');
 	res.locals.success = req.flash('success');
 	next();
@@ -65,7 +69,7 @@ app.use(function(req, res, next) {
 
 //Use routes
 //app.use("/", indexRoutes);
-app.use("/api/", authRoutes);
+app.use("/", authRoutes);
 app.use("/api/campgrounds", campgroundRoutes);
 
 //Start server
