@@ -27,7 +27,7 @@ $(document).ready(function() {
         $("#imgPreview")
           .on("load", function() {
             errorMsg.html('');
-            cropImage(16/9, 1200, 675);
+            cropImage(4/3, 650, 406);
             pickImage.hide();
             imageBtns.show();
           })
@@ -39,9 +39,8 @@ $(document).ready(function() {
       };
       reader.readAsDataURL(this.files[0]);
     }
-    heightAndWidthValid(this, 800, 475);
+    heightAndWidthValid(this, 650, 406);
   });
-
   //Submit image
   $("#submitImage").on("click", function(event) {
     event.preventDefault();
@@ -53,7 +52,10 @@ $(document).ready(function() {
     pickImage.prop("disabled", true);
     console.log(coverImage);
   });
-
+  /* *** WHEN CLICK ON RESET *** */
+  $('#resetImage').on('click', function () {
+    reset();
+  });
   //Crop function
   function cropImage(aspect, minW, minH) {
     $('#imgPreview').cropper({
