@@ -60,6 +60,10 @@ section {
   border: 1px ridge #3498db;
 }
 
+.valid {
+  border: 2px ridge green;
+}
+
 .invalid {
   border: 2px ridge #c12e12;
 }
